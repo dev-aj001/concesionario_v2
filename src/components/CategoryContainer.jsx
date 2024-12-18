@@ -12,7 +12,7 @@ function CategoryItem() {
 
 export default function CategoryContainer() {
     return (
-        <div className="flex justify-center gap-4 h-[150px] w-full">
+        <div className="flex justify-center flex-wrap gap-4 h-auto w-full">
             <div className=" w-[200px] flex flex-col justify-center items-center gap-2 text-gray-600 bg-gray-400 rounded-2xl p-6 px-10 cursor-pointer transform transition duration-200 ease-in-out hover:scale-[1.02] hover:shadow-2xl">
                 <CarIcon size={60} />
                 <h2 className=" text-2xl font-bold text-gray-600 w-full text-center">Sedan</h2>

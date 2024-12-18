@@ -18,7 +18,7 @@ export default function ({ auto }) {
           <div className="flex gap-1 w-full ml-6">
             <p className="text-medium text-white/60 font-bold">Precio de contado: <strong className="text-[#FFB457]">${auto.precio}</strong></p>
           </div>
-          <div className="flex gap-1 xl:scale-90 xl:gap-2 w-full">
+          <div className="flex flex-wrap w-full justify-start gap-1 scale-80 lg:scale-90 xl:gap-2">
             <p className="text-small text-white/60 ">{auto.subidoHace}</p>
             {auto.chips.map((chip) => (
               <Chip size="sm" key={chip}>

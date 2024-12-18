@@ -1,12 +1,13 @@
 import React from "react";
 import MyNavbar from "./components/MyNavBar";
 import MyDetailBar from "./components/MyDetailBar";
-export default function Layout({ children }) {
+import Footer from "./components/Footer";
+export default function Layout({ children, position, shouldHideOnScroll }) {
 
     return (
         <>
             {/* <MyDetailBar /> */}
-            <MyNavbar/>
+            <MyNavbar position={position} shouldHideOnScroll={shouldHideOnScroll}/>
 
             {/* Contenido principal */}
             <div
@@ -14,6 +15,8 @@ export default function Layout({ children }) {
             >
                 {children}
             </div>
+
+            <Footer />
 
         </>
     );

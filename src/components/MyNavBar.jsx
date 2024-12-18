@@ -11,27 +11,27 @@ import {
   Button,
 } from "@nextui-org/react";
 
-export default function MyNavbar() {
+export default function MyNavbar({position="sticky", shouldHideOnScroll = true}) {
 
   const menuItems = [
     {
       name: "Inicio",
-      href: "#",
+      href: "/",
     },
     {
       name: "Autos",
-      href: "#",
+      href: "/cars",
     },
     {
       name: "Vende",
-      href: "#",
+      href: "/Vende",
     },
   ];
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="pt-2 shadow-sm" shouldHideOnScroll  maxWidth="xl">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="pt-2 shadow-sm" shouldHideOnScroll={shouldHideOnScroll} position={position}  maxWidth="xl">
       {/* Toggle button for small screens */}
       <NavbarContent>
         <NavbarMenuToggle
@@ -48,17 +48,17 @@ export default function MyNavbar() {
       <NavbarContent justify="end">
         <NavbarContent justify="end" className="hidden sm:flex mr-6">
           <NavbarItem isActive>
-            <Link color="foreground" href="#">
+            <Link color="foreground" href="/">
               Inicio
             </Link>
           </NavbarItem>
           <NavbarItem >
-            <Link color="foreground" aria-current="page" href="#">
+            <Link color="foreground" aria-current="page" href="/cars">
               Comprar
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" aria-current="page" href="#">
+            <Link color="foreground" aria-current="page" href="/Vende">
               Vender
             </Link>
           </NavbarItem>
@@ -82,7 +82,7 @@ export default function MyNavbar() {
               color={
                 index === 0 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
               }
-              href="#"
+              href={item.href}
               size="lg"
             >
               {item.name}

@@ -19,9 +19,9 @@ export default function () {
   const { autos } = useAutos();
 
   return (
-    <>
+    <div className='w-full'>
       <h1 className='text-3xl font-bold mx-auto flex justify-center'>
-        Conoce tu próximo vehiculo
+        Conoce tu próximo vehículo
       </h1>
       <Swiper
         slidesPerView={3}
@@ -29,7 +29,6 @@ export default function () {
         pagination={{
           clickable: true,
         }}
-        height={300}
         modules={[Pagination]}
         className="mySwiper2"
         breakpoints={{
@@ -38,7 +37,7 @@ export default function () {
             slidesPerView: 1, // Para pantallas pequeñas
             spaceBetween: 10,
           },
-          768: {
+          850: {
             slidesPerView: 2, // Para tablets
             spaceBetween: 20,
           },
@@ -57,6 +56,6 @@ export default function () {
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   );
 }

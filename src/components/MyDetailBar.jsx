@@ -27,7 +27,7 @@ function ArrowDownIcon(props) {
 export default function MyDetailBar() {
 
   return (
-    <Navbar position="static" className="-z-0">
+    <Navbar shouldHideOnScroll position="static" className="-z-0 shadow-sm" maxWidth="xl">
       {/* Toggle button for small screens */}
       <NavbarContent>
         <SearchInput />

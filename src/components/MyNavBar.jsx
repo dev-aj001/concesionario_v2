@@ -31,7 +31,7 @@ export default function MyNavbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="pt-2">
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="pt-2 shadow-sm" shouldHideOnScroll  maxWidth="xl">
       {/* Toggle button for small screens */}
       <NavbarContent>
         <NavbarMenuToggle
@@ -39,7 +39,7 @@ export default function MyNavbar() {
           className="sm:hidden"
         />
         <NavbarBrand>
-          <p className="font-bold text-inherit">ACME</p>
+          <p className="font-bold text-inherit">TECAR</p>
         </NavbarBrand>
       </NavbarContent>
       {/* Menu items for large screens */}
@@ -64,11 +64,11 @@ export default function MyNavbar() {
           </NavbarItem>
         </NavbarContent>
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="#">Iniciar sesion</Link>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+            Registrate
           </Button>
         </NavbarItem>
       </NavbarContent>

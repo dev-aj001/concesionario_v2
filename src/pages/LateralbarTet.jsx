@@ -1,21 +1,20 @@
-import { useState, useEffect } from "react";
-import { Card, CardBody, CardFooter, Image } from "@nextui-org/react";
+import { useEffect, useState } from "react";
+import {Card, CardBody, CardFooter, Image} from "@nextui-org/react";
 
+import useAutos from "../hooks/useAutos";
 
-export default function DynamicGrid({ cards }) {
-    const [list, setList] = useState(cards);
+export default function () {
 
-    useEffect(() => {
-        // Actualiza las tarjetas cada vez que el array cambia
-        setList(cards);
-    }, [cards]);
+    const {autos} = useAutos;
+
+    const list = autos;
 
     return (
-        <div className="container mx-auto p-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="w-[300px] h-[800px] bg-slate-300">
+            <div className="gap-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
                 {list.map((item, index) => (
                     /* eslint-disable no-console */
-                    <Card radius="sm" key={index} isPressable shadow="sm" isHoverable onPress={() => console.log("item pressed")}>
+                    <Card radius="sm" key={index} isPressable shadow="sm" onPress={() => console.log("item pressed")}>
                         <CardBody className="overflow-visible p-0">
                             <Image
                                 alt={item.modelo}

@@ -32,7 +32,7 @@ export default function () {
         modules={[Pagination]}
         className="mySwiper2"
         breakpoints={{
-          // Tamaño máximo de pantalla y configuración
+          // Tamano máximo de pantalla y configuración
           0: {
             slidesPerView: 1, // Para pantallas pequeñas
             spaceBetween: 10,

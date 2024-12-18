@@ -24,7 +24,7 @@ export default function MyNavbar({position="sticky", shouldHideOnScroll = true})
     },
     {
       name: "Vende",
-      href: "/Vende",
+      href: "/Vender",
     },
   ];
 
@@ -58,16 +58,16 @@ export default function MyNavbar({position="sticky", shouldHideOnScroll = true})
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" aria-current="page" href="/Vende">
+            <Link color="foreground" aria-current="page" href="/Vender">
               Vender
             </Link>
           </NavbarItem>
         </NavbarContent>
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Iniciar sesion</Link>
+          <Link href="/login">Iniciar sesion</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link} color="primary" href="/signup" variant="flat">
             Registrate
           </Button>
         </NavbarItem>
